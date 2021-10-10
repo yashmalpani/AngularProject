@@ -1,0 +1,48 @@
+<h2>Admin Panel</h2>
+<hr />
+<h4>Change Password</h4>
+<form>
+    <div class="mb-3">
+        <input type="password" class="form-control" name="name" [(ngModel)]="password" placeholder="Password">
+    </div>
+    <div class="mb-3">
+        <input type="password" class="form-control" name="description" [(ngModel)]="newPass" placeholder="New Password">
+    </div>
+    <div class="mb-3">
+        <input type="password" class="form-control" name="price" [(ngModel)]="newPassConfirm"
+            placeholder="Confirm Password">
+    </div>
+
+    <button type="reset" class="btn btn-secondary" routerLink='/admin'>Reset</button> |
+    <button type="submit" class="btn btn-success" (click)="passwordUpdate()">Change Password</button>
+</form>
+
+<hr />
+
+<a class="btn btn-success" routerLink="/food-add">Add food</a>
+
+<hr />
+<div>
+
+    <h4>Food Masterlist</h4>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of foodList">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>
+                    <button class=" btn btn-secondary" (click)="remove(item.id)">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
