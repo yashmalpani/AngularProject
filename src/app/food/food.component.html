@@ -1,0 +1,10 @@
+<div *ngFor="let food of foodList">
+
+    <div class="p-3 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-1">
+            <h1 class="display-5 fw-bold">{{food.name}}</h1>
+            <p class="col-md-8 fs-4">{{food.description}}</p>
+            <h5><strong>Price: </strong>{{food.price}}</h5>
+        </div>
+    </div>
+</div>

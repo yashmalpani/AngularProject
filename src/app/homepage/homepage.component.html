@@ -1,0 +1,8 @@
+<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+    <div>
+        <input type="text" class="form-control" name="Search" [(ngModel)]="searchText" placeholder="Search...">
+    </div>
+    <a [routerLink]="['/search',searchText]" class=" btn btn-secondary">Search</a>
+    <!-- <button type="submit" class="btn btn-primary" (click)="search()"> Search
+    </button> -->
+</form>
